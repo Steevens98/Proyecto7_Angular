@@ -8,8 +8,20 @@ export class DataService {
 
   constructor(private http:HttpClient) { }
   private URL: string = 'http://localhost:3000/rest/Paciente/findAll/json';
+  private URLMedico: string = 'http://localhost:3000/rest/Medico/findAll/json';
+  private URLEspecialidad: string = 'http://localhost:3000/rest/Especialidad/findAll/json'
 
+  
   getResponse() {
     return this.http.get(this.URL);
   }
+
+  getResponseMedico() {
+    return this.http.get(this.URLMedico);
+  }
+
+  getResponseEspecialidad() {
+    return this.http.get(this.URLEspecialidad);
+  }
+
 }
