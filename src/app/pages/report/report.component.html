@@ -1,15 +1,10 @@
-<mat-form-field>  
-  <mat-label>Seleccione una especialidad</mat-label>
-  <mat-select>
-    <mat-option *ngFor="let dato of dataEspecialidad" [value]="dato.idEspecialidad">
-      {{dato.nombre}}
-    </mat-option>
-  </mat-select>
-</mat-form-field>
+          
+  <input (keyup)="applyFilter($event.target)" matInput placeholder="Filter"/>
 
 <div class="container" fxLayout="row" fxLayoutAlign="center start">
   <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
-    <table mat-table [dataSource]="data" class="mat-elevation-z8">
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
       <!-- REPETIR POR CADA ATRIBUTO DE LA INTERFAZ - INICIO -->
       <ng-container matColumnDef="idMedico">

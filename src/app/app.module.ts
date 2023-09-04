@@ -18,6 +18,7 @@ import { HttpClientModule } from  '@angular/common/http';
 import {MatTableModule} from '@angular/material/table'
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';;
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
     HttpClientModule,
     MatTableModule,
     MatSelectModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
