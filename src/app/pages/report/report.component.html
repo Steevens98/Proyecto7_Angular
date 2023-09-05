@@ -1,9 +1,17 @@
-          
-  <input (keyup)="applyFilter($event.target)" matInput placeholder="Filter"/>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+
+<div class="container-entrada">
+  <div class="filtro-icon">
+    <span id="icon" class="material-symbols-outlined">filter_alt</span>
+  </div>
+    <input class="entrada" (keyup)="applyFilter($event.target)" matInput placeholder="Escriba una especialidad" />    
+</div>
+  
 
 <div class="container" fxLayout="row" fxLayoutAlign="center start">
   <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
-
+    <div class="table-title">Tabla de médicos</div>
     <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
       <!-- REPETIR POR CADA ATRIBUTO DE LA INTERFAZ - INICIO -->
